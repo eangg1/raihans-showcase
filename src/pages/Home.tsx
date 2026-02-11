@@ -30,7 +30,7 @@ export default function Home() {
               </a>
 
               <a
-                href="/#Projects"
+                href="/projects"
                 className="flex items-center gap-2 px-5 py-2 rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
               >
                 <Folder size={16} />
