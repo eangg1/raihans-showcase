@@ -19,7 +19,7 @@ export default function Projects() {
       <div className="max-w-5xl mx-auto mb-16 text-center">
         <h1 className="text-3xl font-semibold mb-3"> Projects</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          beberapa project yang pernah saya kerjakan
+          Project yang pernah saya buat baik untuk kebutuhan pribadi maupun untuk umum.
         </p>
       </div>
 
