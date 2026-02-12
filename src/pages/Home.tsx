@@ -52,7 +52,7 @@ export default function Home() {
           {/* RIGHT — Photo */}
           <div className="flex justify-center md:justify-end">
             <img
-              src="/public/assets/profile.jpg"
+              src="/assets/profile.jpg"
               alt="profile"
               className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover shadow-lg"
             />
