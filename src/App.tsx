@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
 import Films from "./pages/Films";
 import FilmDetail from "./pages/FilmDetail";
 import Music from "./pages/Music";
@@ -17,7 +16,6 @@ function App() {
         <main className="flex-grow pt-20">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
             <Route path="/films" element={<Films />} />
             <Route path="/film/:id" element={<FilmDetail />} />
             <Route path="/music/*" element={<Music />} />

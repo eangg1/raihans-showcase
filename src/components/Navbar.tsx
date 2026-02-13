@@ -27,7 +27,6 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-6 font-medium text-[17px]">
           <Link to="/" className="hover:text-blue-500">Home</Link>
-          <Link to="/projects" className="hover:text-blue-500">Projects</Link>
           <Link to="/films" className="hover:text-blue-500">Films</Link>
           <Link to="/music" className="hover:text-blue-500">Music</Link>
           <Link to="/books" className="hover:text-blue-500">Books</Link>
@@ -70,7 +69,6 @@ export default function Navbar() {
         <div className="md:hidden border-t dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
           <div className="flex flex-col px-6 py-4 gap-4 font-medium">
             <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-            <Link to="/projects" onClick={() => setOpen(false)}>Projects</Link>
             <Link to="/films" onClick={() => setOpen(false)}>Films</Link>
             <Link to="/music" onClick={() => setOpen(false)}>Music</Link>
             <Link to="/books" onClick={() => setOpen(false)}>Books</Link>
