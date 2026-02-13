@@ -15,7 +15,7 @@ export default function Home() {
             </h1>
 
             <p className="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed">
-              halaman ini berisi catatan personal tentang tontonan, bacaan, dan lagu-lagu favorit yang menemani keseharianku. tempat sederhana untuk menyimpan cerita, kesan, dan hal-hal kecil yang menginspirasi.
+              halaman ini berisi catatan personal tentang tontonan, bacaan, dan lagu-lagu favorit.
             </p>
           </div>
         </div>
