@@ -50,9 +50,9 @@ export default function ArtistSongs() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.05 }}
-            className="flex items-center justify-between bg-gray-100 dark:bg-gray-800 rounded-xl p-4 hover:shadow-lg transition"
+            className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-gray-100 dark:bg-gray-800 rounded-xl p-4 hover:shadow-lg transition"
           >
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 w-full">
               <span className="text-blue-500 font-bold w-6">{index + 1}</span>
               <img
                 src={song.cover || artist.cover}
