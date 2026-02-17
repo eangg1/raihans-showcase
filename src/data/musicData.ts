@@ -60,8 +60,8 @@ export const musicData = [
     id: "arash-buana",
     name: "Arash Buana",
     genre: "Indie, Alternative",
-    image: "https://i.scdn.co/image/ab6761610000e5ebd9c8b1a7f2c3e4b1a9c8e5f6",
-    cover: "https://i.scdn.co/image/ab6761610000e5ebd9c8b1a7f2c3e4b1a9c8e5f6",
+    image: "https://i.scdn.co/image/ab6761610000e5eb15c16a58c2afaf21f2f2c7cd",
+    cover: "https://i.scdn.co/image/ab6761610000e5eb15c16a58c2afaf21f2f2c7cd",
     songs: [
       { title: "tavoryn", album: "life update", cover: "https://t2.genius.com/unsafe/375x0/https%3A%2F%2Fimages.genius.com%2Fc903276b5fcfb4f83986f16f7f3398b9.1000x1000x1.png" },
       { title: "stars", album: "stars", cover: "https://t2.genius.com/unsafe/430x430/https%3A%2F%2Fimages.genius.com%2F70bc1f6675d8f03da90260870d0167df.640x640x1.jpg" },
