@@ -57,6 +57,20 @@ export const musicData = [
     ],
   },
   {
+    id: "arash-buana",
+    name: "Arash Buana",
+    genre: "Indie, Alternative",
+    image: "https://i.scdn.co/image/ab6761610000e5ebd9c8b1a7f2c3e4b1a9c8e5f6",
+    cover: "https://i.scdn.co/image/ab6761610000e5ebd9c8b1a7f2c3e4b1a9c8e5f6",
+    songs: [
+      { title: "tavoryn", album: "life update", cover: "https://t2.genius.com/unsafe/375x0/https%3A%2F%2Fimages.genius.com%2Fc903276b5fcfb4f83986f16f7f3398b9.1000x1000x1.png" },
+      { title: "stars", album: "stars", cover: "https://t2.genius.com/unsafe/430x430/https%3A%2F%2Fimages.genius.com%2F70bc1f6675d8f03da90260870d0167df.640x640x1.jpg" },
+      { title: "we'll be okay, for today", album: "logic mess", cover: "https://t2.genius.com/unsafe/430x430/https%3A%2F%2Fimages.genius.com%2Fd454af0f2057e2350832493ee933a48e.1000x1000x1.png" },
+      { title: "hey, i'm tired", album: "life update", cover: "https://t2.genius.com/unsafe/375x0/https%3A%2F%2Fimages.genius.com%2Fc903276b5fcfb4f83986f16f7f3398b9.1000x1000x1.png" },
+      { title: "i've always loved you", album: "logic mess", cover: "https://t2.genius.com/unsafe/430x430/https%3A%2F%2Fimages.genius.com%2Fd454af0f2057e2350832493ee933a48e.1000x1000x1.png" },
+    ]
+  },
+  {
     id: "so-7",
     name: "Sheila On 7",
     genre: "Rock, Pop",
