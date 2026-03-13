@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 export default function SpotifyLyrics({ lyrics, audioRef }) {
 
   const lines = lyrics.split("\n");
+
   const [currentLine, setCurrentLine] = useState(0);
+
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -29,7 +31,8 @@ export default function SpotifyLyrics({ lyrics, audioRef }) {
 
   useEffect(() => {
 
-    const el = containerRef.current?.children[currentLine];
+    const el =
+      containerRef.current?.children[currentLine];
 
     if (el) {
 
@@ -54,19 +57,23 @@ export default function SpotifyLyrics({ lyrics, audioRef }) {
         <motion.p
           key={index}
           animate={{
-            opacity: index === currentLine ? 1 : 0.25,
-            scale: index === currentLine ? 1.25 : 1,
-            y: index === currentLine ? 0 : 10
+            opacity:
+              index === currentLine ? 1 : 0.25,
+            scale:
+              index === currentLine ? 1.25 : 1,
+            y:
+              index === currentLine ? 0 : 10
           }}
           transition={{ duration: 0.35 }}
           className="text-xl font-semibold"
         >
+
           {line}
+
         </motion.p>
 
       ))}
 
     </div>
-
   );
 }
