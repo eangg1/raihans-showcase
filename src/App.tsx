@@ -7,6 +7,7 @@ import Books from "./pages/Books";
 import NextPage from "./pages/NextPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import LyricsPage from "./pages/music/LyricsPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/films" element={<Films />} />
             <Route path="/film/:id" element={<FilmDetail />} />
             <Route path="/music/*" element={<Music />} />
+            <Route path="/lyrics/:artist/:title" element={<LyricsPage />} />
             <Route path="/books" element={<Books />} />
             <Route path="/next-page" element={<NextPage />} />
           </Routes>

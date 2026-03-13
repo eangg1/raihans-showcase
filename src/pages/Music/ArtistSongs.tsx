@@ -68,11 +68,20 @@ export default function ArtistSongs() {
             </div>
 
             {/* ✅ Kirim album untuk hasil iTunes yang lebih akurat */}
-            <SongPreview
-              artist={artist.name}
-              title={song.title}
-              album={song.album}
-            />
+            <div className="flex gap-3 items-center">
+              <SongPreview
+                artist={artist.name}
+                title={song.title}
+                album={song.album}
+              />
+
+              <Link
+                to={`/lyrics/${encodeURIComponent(artist.name)}/${encodeURIComponent(song.title)}`}
+                className="text-xs bg-purple-500 text-white px-3 py-1 rounded-full hover:bg-purple-600 transition"
+              >
+                Lyric Mode
+              </Link>
+            </div>
           </motion.div>
         ))}
       </div>
