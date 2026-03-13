@@ -22,6 +22,7 @@ function App() {
             <Route path="/film/:id" element={<FilmDetail />} />
             <Route path="/music/*" element={<Music />} />
             <Route path="/lyrics/:artist/:title" element={<LyricMode />} />
+            <Route path="/lyrics-overlay/:artist/:title" element={<LyricsOverlay />} />
             <Route path="/books" element={<Books />} />
             <Route path="/next-page" element={<NextPage />} />
           </Routes>
