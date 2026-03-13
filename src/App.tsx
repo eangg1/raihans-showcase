@@ -8,6 +8,7 @@ import NextPage from "./pages/NextPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import LyricMode from "./pages/Music/LyricMode";
+import LyricsOverlay from "./LyricsOverlay";
 
 function App() {
   return (

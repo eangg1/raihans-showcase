@@ -1,5 +1,17 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import SpotifyLyrics from "./SpotifyLyrics";
+import { useRef } from "react";
+const audioRef = useRef();
+
+<audio
+  ref={audioRef}
+  controls
+  className="w-full mb-6"
+  src={song.audio}
+/>
+
+
 
 export default function LyricsOverlay({ artist, title, cover, onClose }) {
   const [lyrics, setLyrics] = useState("Loading lyrics...");
@@ -99,6 +111,11 @@ export default function LyricsOverlay({ artist, title, cover, onClose }) {
           >
             <pre className="whitespace-pre-wrap">{lyrics}</pre>
           </div>
+
+          <SpotifyLyrics
+            lyrics={song.lyrics}
+            audioRef={audioRef}
+            />
         </motion.div>
       </motion.div>
     </AnimatePresence>
