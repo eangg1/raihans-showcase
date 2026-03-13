@@ -2,9 +2,6 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { musicData } from "../../data/musicData";
 import SongPreview from "./SongPreview";
-import { useState } from "react";
-import LyricsOverlay from "./LyricsOverlay";
-const [lyricSong, setLyricSong] = useState(null);
 
 export default function ArtistSongs() {
   const { id } = useParams();
@@ -71,20 +68,11 @@ export default function ArtistSongs() {
             </div>
 
             {/* ✅ Kirim album untuk hasil iTunes yang lebih akurat */}
-            <div className="flex gap-3 items-center">
-              <SongPreview
-                artist={artist.name}
-                title={song.title}
-                album={song.album}
-              />
-
-              <Link
-                to={`/lyrics/${encodeURIComponent(artist.name)}/${encodeURIComponent(song.title)}`}
-                className="text-xs bg-purple-500 text-white px-3 py-1 rounded-full hover:bg-purple-600 transition"
-              >
-                Lyric Mode
-              </Link>
-            </div>
+            <SongPreview
+              artist={artist.name}
+              title={song.title}
+              album={song.album}
+            />
           </motion.div>
         ))}
       </div>
