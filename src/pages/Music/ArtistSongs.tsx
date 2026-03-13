@@ -2,6 +2,9 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { musicData } from "../../data/musicData";
 import SongPreview from "./SongPreview";
+import { useState } from "react";
+import LyricsOverlay from "./LyricsOverlay";
+const [lyricSong, setLyricSong] = useState(null);
 
 export default function ArtistSongs() {
   const { id } = useParams();

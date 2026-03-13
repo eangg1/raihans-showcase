@@ -60,10 +60,33 @@ export default function SongPreview({ artist, title, album }: SongPreviewProps) 
     return <span className="text-xs text-gray-500 italic">No preview</span>;
 
   return (
-    <div className="flex items-center gap-3">
-      <audio controls className="h-8">
-        <source src={preview.previewUrl} type="audio/mpeg" />
-      </audio>
-    </div>
+    <div className="flex gap-3 items-center">
+  <SongPreview
+    artist={artist.name}
+    title={song.title}
+    album={song.album}
+  />
+
+  <button
+    onClick={() =>
+      setLyricSong({
+        artist: artist.name,
+        title: song.title,
+        cover: song.cover || artist.cover
+      })
+    }
+    className="text-xs bg-purple-500 text-white px-3 py-1 rounded-full hover:bg-purple-600 transition"
+  >
+    Lyric Mode
+  </button>
+</div>
   );
+  {lyricSong && (
+  <LyricsOverlay
+    artist={lyricSong.artist}
+    title={lyricSong.title}
+    cover={lyricSong.cover}
+    onClose={() => setLyricSong(null)}
+  />
+)}
 }
