@@ -7,7 +7,7 @@ import Books from "./pages/Books";
 import NextPage from "./pages/NextPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import LyricMode from "./pages/Music/LyricMode";
+import LyricsMode from "./pages/Music/LyricsMode";
 import LyricsOverlay from "./pages/Music/LyricsOverlay";
 import SpotifyLyrics from "./pages/Music/SpotifyLyrics";
 
