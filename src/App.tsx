@@ -7,7 +7,7 @@ import Books from "./pages/Books";
 import NextPage from "./pages/NextPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import LyricsPage from "./pages/music/LyricsPage";
+import LyricsPage from "./pages/Music/LyricsPage";
 
 function App() {
   return (
