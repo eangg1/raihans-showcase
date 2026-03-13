@@ -1,80 +1,72 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-function parseLRC(lrc) {
-  const lines = lrc.split("\n");
-
-  return lines
-    .map((line) => {
-      const match = line.match(/\[(\d+):(\d+\.\d+)\](.*)/);
-
-      if (!match) return null;
-
-      const min = parseInt(match[1]);
-      const sec = parseFloat(match[2]);
-
-      return {
-        time: min * 60 + sec,
-        text: match[3].trim(),
-      };
-    })
-    .filter(Boolean);
-}
-
 export default function SpotifyLyrics({ lyrics, audioRef }) {
+
+  const lines = lyrics.split("\n");
   const [currentLine, setCurrentLine] = useState(0);
-  const parsedLyrics = parseLRC(lyrics);
-  const containerRef = useRef();
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const audio = audioRef.current;
 
     const interval = setInterval(() => {
-      const time = audio.currentTime;
 
-      for (let i = 0; i < parsedLyrics.length; i++) {
-        if (
-          time >= parsedLyrics[i].time &&
-          (i === parsedLyrics.length - 1 ||
-            time < parsedLyrics[i + 1].time)
-        ) {
-          setCurrentLine(i);
-        }
+      if (!audioRef.current) return;
+
+      const time = audioRef.current.currentTime;
+
+      const index = Math.floor(time / 4);
+
+      if (index < lines.length) {
+        setCurrentLine(index);
       }
-    }, 100);
+
+    }, 200);
 
     return () => clearInterval(interval);
-  }, [parsedLyrics, audioRef]);
+
+  }, [audioRef, lines.length]);
 
   useEffect(() => {
+
     const el = containerRef.current?.children[currentLine];
 
     if (el) {
+
       el.scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: "center"
       });
+
     }
+
   }, [currentLine]);
 
   return (
+
     <div
       ref={containerRef}
-      className="h-96 overflow-hidden text-center text-xl font-medium space-y-4"
+      className="h-[420px] overflow-hidden text-center space-y-6"
     >
-      {parsedLyrics.map((line, index) => (
+
+      {lines.map((line, index) => (
+
         <motion.p
           key={index}
           animate={{
-            opacity: index === currentLine ? 1 : 0.3,
-            scale: index === currentLine ? 1.1 : 1,
+            opacity: index === currentLine ? 1 : 0.25,
+            scale: index === currentLine ? 1.25 : 1,
+            y: index === currentLine ? 0 : 10
           }}
-          transition={{ duration: 0.3 }}
-          className="text-white"
+          transition={{ duration: 0.35 }}
+          className="text-xl font-semibold"
         >
-          {line.text}
+          {line}
         </motion.p>
+
       ))}
+
     </div>
+
   );
 }
