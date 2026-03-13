@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import LyricMode from "./pages/Music/LyricMode";
 import LyricsOverlay from "./pages/Music/LyricsOverlay";
+import SpotifyLyrics from "./pages/Music/SpotifyLyrics";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/music/*" element={<Music />} />
             <Route path="/lyrics/:artist/:title" element={<LyricMode />} />
             <Route path="/lyrics-overlay/:artist/:title" element={<LyricsOverlay />} />
+            <route path="/spotify-lyrics/:artist/:title" element={<SpotifyLyrics />} />
             <Route path="/books" element={<Books />} />
             <Route path="/next-page" element={<NextPage />} />
           </Routes>
